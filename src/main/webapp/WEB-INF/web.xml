@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.jim.servlet.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.jim.servlet.UploadServlet</servlet-class>
+        <init-param>
+            <param-name>filepath</param-name>
+            <param-value>D:/temp/upload</param-value>
+        </init-param>
+        <init-param>
+            <param-name>temppath</param-name>
+            <param-value>D:/temp/upload/temp</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload.do</url-pattern>
+    </servlet-mapping>
+</web-app>
